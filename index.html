@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kuchi's - Menú</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/logo.png">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <img class="brand-logo" src="assets/icons/logo.png" alt="Kuchi's logo" />
+        <div>
+          <h1>Kuchi's</h1>
+          <small>Burger & Broaster</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="menu-section">
+      <h2>Nuestro Menú</h2>
+      <p class="subtitle">Explora nuestras deliciosas opciones y personaliza tu pedido</p>
+
+      <nav class="tabs" role="tablist" aria-label="Categorías">
+        <button class="tab active" data-cat="hamburguesas" role="tab" aria-selected="true">Hamburguesas</button>
+        <button class="tab" data-cat="sanguches" role="tab" aria-selected="false">Sanguches</button>
+        <button class="tab" data-cat="salchipapas" role="tab" aria-selected="false">Salchipapas</button>
+        <button class="tab" data-cat="broaster" role="tab" aria-selected="false">Broaster</button>
+        <button class="tab" data-cat="alitas-bbq" role="tab" aria-selected="false">Alitas BBQ</button>
+        <button class="tab" data-cat="porciones" role="tab" aria-selected="false">Porciones</button>
+        <button class="tab" data-cat="bebidas" role="tab" aria-selected="false">Bebidas</button>
+
+        <!-- Indicador animado -->
+        <div class="tab-indicator" aria-hidden="true"></div>
+      </nav>
+
+      <div class="cards-grid" id="menuGrid">
+        <!-- HAMBURGUESAS -->
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-clasica.png" alt="Clásica"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Clásica</h3><span class="price">S/11.00</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Clásica" data-price="11.00" aria-label="Agregar Clásica">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-mr-tocino.png" alt="Mr. Tocino"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Mr. Tocino</h3><span class="price">S/15.50</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + doble queso + tocino ahumado + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Mr. Tocino" data-price="15.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-agringada.png" alt="Agringada"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Agringada</h3><span class="price">S/16.90</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + doble queso + tocino BBQ + pickles + onion rins + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Agringada" data-price="16.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-gaucha.png" alt="Gaucha"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Gaucha</h3><span class="price">S/16.90</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + chorizo parrillero + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Gaucha" data-price="16.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-royale.png" alt="Royale"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Royale</h3><span class="price">S/13.50</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + queso + huevo + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Royal" data-price="13.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-kuchis.png" alt="Kuchi's"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Kuchi's</h3><span class="price">S/19.90</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + queso + costillas BBQ + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Kuchi's" data-price="19.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-carnivora.png" alt="Carnívora"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Carnívora</h3><span class="price">S/19.90</span></div>
+            <p class="desc">Doble hamburguesa artesanal 150gr + doble queso + tocino ahumado + pickles + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Carnívora" data-price="19.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-hawaiana.png" alt="Hawaiana"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Hawaiana</h3><span class="price">S/15.50</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + queso + piña en almibar + salsa BBQ + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Hawaiana" data-price="15.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="hamburguesas">
+          <figure class="card-media"><img src="assets/img/hamburguesa-a-lo-pobre.png" alt="A lo Pobre"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>A lo Pobre</h3><span class="price">S/14.50</span></div>
+            <p class="desc">Hamburguesa artesanal 150gr + queso + huevo + platano + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="A lo Pobre" data-price="14.50">＋ Agregar</button></div>
+          </div>
+        </article>
+        
+        <!-- SANGUCHES -->
+        <article class="card" data-category="sanguches">
+          <figure class="card-media"><img src="assets/img/sanguche-crispy.png" alt="Crispy"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Crispy</h3><span class="price">S/14.50</span></div>
+            <p class="desc">Crocante pechuga + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Crispy" data-price="14.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="sanguches">
+          <figure class="card-media"><img src="assets/img/sanguche-a-la-plancha.png" alt="A la Plancha"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>A la Plancha</h3><span class="price">S/12.50</span></div>
+            <p class="desc">Pechuga a la plancha + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="A la Plancha" data-price="12.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="sanguches">
+          <figure class="card-media"><img src="assets/img/sanguche-deshilachado.png" alt="Deshilachado"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Deshilachado</h3><span class="price">S/11.50</span></div>
+            <p class="desc">Pechuga deshilachada + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Deshilachado" data-price="11.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="sanguches">
+          <figure class="card-media"><img src="assets/img/sanguche-filete-royale.png" alt="Filete Royale"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Filete Royale</h3><span class="price">S/15.00</span></div>
+            <p class="desc">Pechuga a la plancha + huevo + queso + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Filete Royale" data-price="15.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="sanguches">
+          <figure class="card-media"><img src="assets/img/sanguche-deshilachado-royale.png" alt="Deshilachado Royale"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Deshilachado Royale</h3><span class="price">S/15.00</span></div>
+            <p class="desc">Pechuga deshilachada + huevo + queso + papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Deshilachado Royale" data-price="15.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <!-- SALCHIPAPAS -->
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchiclasica.png" alt="Salchi-Clasica"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi-Clásica</h3><span class="price">S/10.00</span></div>
+            <p class="desc">Salchichas vienesas + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi-Clásica" data-price="10.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchipollo.png" alt="Salchi-Pollo"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi-Pollo</h3><span class="price">S/14.90</span></div>
+            <p class="desc">Salchichas vienesas + trozos de pechuga broaster + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi-Pollo" data-price="14.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchifilete.png" alt="Salchi-Filete"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi-Filete</h3><span class="price">S/15.90</span></div>
+            <p class="desc">Salchichas vienesas + pechuga a la plancha + queso + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi-Filete" data-price="15.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchi-a-lo-pobre.png" alt="Salchi a lo Pobre"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi a lo Pobre</h3><span class="price">S/12.50</span></div>
+            <p class="desc">Salchichas vienesas + huevo + platano frito + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi a lo Pobre" data-price="12.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchi-carnivoro.png" alt="Salchi-Carnivora"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi-Carnívora</h3><span class="price">S/17.90</span></div>
+            <p class="desc">Salchichas vienesas + churrasco deshuesado a la parrilla + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi-Carnívora" data-price="17.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchikuchis.png" alt="Salchi-Kuchi"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi-Kuchi's</h3><span class="price">S/19.90</span></div>
+            <p class="desc">Salchichas vienesas + queso + costillas BBQ + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi-Kuchi's" data-price="19.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-salchiparrillero.png" alt="Salchi-Parrillero"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Salchi-Parrillero</h3><span class="price">S/22.90</span></div>
+            <p class="desc">Salchichas vienesas + churrasco deshuesado a la parrilla + choriso parrillero + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Salchi-Parrillero" data-price="22.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="salchipapas">
+          <figure class="card-media"><img src="assets/img/salchipapa-choripapa.png" alt="Choripapa"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Choripapa</h3><span class="price">S/15.50</span></div>
+            <p class="desc">Salchichas vienesas + chorizo parrillero + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Choripapa" data-price="15.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <!-- BROASTER -->
+        <article class="card" data-category="broaster">
+          <figure class="card-media"><img src="assets/img/broaster-alita.png" alt="Alita"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Alita</h3><span class="price">S/11.00</span></div>
+            <p class="desc">Alita broaster + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Ala" data-price="11.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="broaster">
+          <figure class="card-media"><img src="assets/img/broaster-pierna.png" alt="Pierna"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Pierna</h3><span class="price">S/12.90</span></div>
+            <p class="desc">Pierna broaster + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Pierna" data-price="12.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="broaster">
+          <figure class="card-media"><img src="assets/img/broaster-pecho.png" alt="Pecho"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Pecho</h3><span class="price">S/15.90</span></div>
+            <p class="desc">Pecho broaster + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Pecho" data-price="15.90">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="broaster">
+          <figure class="card-media"><img src="assets/img/broaster-alita-doble.png" alt="Alita Doble"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Alita Doble</h3><span class="price">S/15.00</span></div>
+            <p class="desc">Alita doble broaster + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Alita Doble" data-price="15.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="broaster">
+          <figure class="card-media"><img src="assets/img/broaster-pierna-doble.png" alt="Pierna Doble"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Pierna Doble</h3><span class="price">S/19.00</span></div>
+            <p class="desc">Pierna doble broaster + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Pierna Doble" data-price="19.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <!-- ALITAS BBQ -->
+        <article class="card" data-category="alitas-bbq">
+          <figure class="card-media"><img src="assets/img/alitas-4-piezas.png" alt="4 Piezas"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>4 Piezas</h3><span class="price">S/15.00</span></div>
+            <p class="desc">4 piezas de alitas BBQ + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Alitas 4 Piezas" data-price="15.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="alitas-bbq">
+          <figure class="card-media"><img src="assets/img/alitas-6-piezas.png" alt="6 Piezas"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>6 Piezas</h3><span class="price">S/19.50</span></div>
+            <p class="desc">6 piezas de alitas BBQ + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Alitas 6 Piezas" data-price="19.50">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="alitas-bbq">
+          <figure class="card-media"><img src="assets/img/alitas-8-piezas.png" alt="8 Piezas"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>8 Piezas</h3><span class="price">S/24.00</span></div>
+            <p class="desc">8 piezas de alitas BBQ + papas fritas de la casa + ensalada</p>
+            <div class="card-actions"><button class="add-btn" data-name="Alitas 8 Piezas" data-price="24.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <!-- PORCIONES -->
+        <article class="card" data-category="porciones">
+          <figure class="card-media"><img src="assets/img/porciones-papas.png" alt="Papas"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Porción Papas</h3><span class="price">S/10.00</span></div>
+            <p class="desc">Porción de papas fritas de la casa</p>
+            <div class="card-actions"><button class="add-btn" data-name="Papas (Porción)" data-price="10.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="porciones">
+          <figure class="card-media"><img src="assets/img/porciones-onions-rins.png" alt="Onions Rins"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Onions Rins</h3><span class="price">S/8.00</span></div>
+            <p class="desc">Porción de onions rins</p>
+            <div class="card-actions"><button class="add-btn" data-name="Onions Rins (Porción)" data-price="8.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <!-- BEBIDAS -->
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-inca-cola.png" alt="Inca Cola"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Inca Cola</h3><span class="price">S/4.00</span></div>
+            <p class="desc">600 ml</p>
+            <div class="card-actions"><button class="add-btn" data-name="Inca Cola" data-price="4.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-coca-cola.png" alt="Coca Cola"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Coca Cola</h3><span class="price">S/4.00</span></div>
+            <p class="desc">600 ml</p>
+            <div class="card-actions"><button class="add-btn" data-name="Coca Cola" data-price="4.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-chicha-vaso.png" alt="Chicha Morada Vaso"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Chicha Morada (Vaso)</h3><span class="price">S/3.00</span></div>
+            <p class="desc">Chicha natural</p>
+            <div class="card-actions"><button class="add-btn" data-name="Chicha Morada (Vaso)" data-price="3.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-chicha-medio-litro.png" alt="Chicha 1/2 L"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Chicha Morada (1/2 L)</h3><span class="price">S/5.00</span></div>
+            <p class="desc">Chicha natural</p>
+            <div class="card-actions"><button class="add-btn" data-name="Chicha Morada (1/2 L)" data-price="5.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-chicha-litro.png" alt="Chicha 1L"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Chicha Morada (1L)</h3><span class="price">S/10.00</span></div>
+            <p class="desc">Chicha natural</p>
+            <div class="card-actions"><button class="add-btn" data-name="Chicha Morada (1L)" data-price="10.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-jugo-piña.png" alt="Jugo Piña"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Jugo de Piña</h3><span class="price">S/10.00</span></div>
+            <p class="desc">Fruta natural</p>
+            <div class="card-actions"><button class="add-btn" data-name="Jugo de Piña" data-price="10.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-jugo-fresa.png" alt="Jugo Fresa"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Jugo de Fresa</h3><span class="price">S/10.00</span></div>
+            <p class="desc">Fruta natural</p>
+            <div class="card-actions"><button class="add-btn" data-name="Jugo de Fresa" data-price="10.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-jugo-fresa-con-leche.png" alt="Jugo Fresa Leche"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Jugo de Fresa c/ Leche</h3><span class="price">S/12.00</span></div>
+            <p class="desc">Fruta natural</p>
+            <div class="card-actions"><button class="add-btn" data-name="Jugo de Fresa c/ Leche" data-price="12.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <figure class="card-media"><img src="assets/img/bebida-infusiones.png" alt="Infusiones"></figure>
+          <div class="card-body">
+            <div class="card-row"><h3>Infusiones</h3><span class="price">S/3.00</span></div>
+            <p class="desc">Té, Manzanilla y Anís</p>
+            <div class="card-actions"><button class="add-btn" data-name="Infusiones" data-price="3.00">＋ Agregar</button></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <aside class="cart" id="cartPanel" role="region" aria-label="Tu Pedido" aria-live="polite">
+      <div class="cart-header">
+        <h3>Simulación de tu Pedido</h3>
+      </div>
+      <div class="cart-body" id="cartBody">
+        <div class="empty">
+          <div class="cart-icon">🛒</div>
+          <p>Tu pedido está vacío<br><small>Agrega algunos platillos deliciosos</small></p>
+        </div>
+      </div>
+      <div class="cart-footer" id="cartFooter" hidden>
+        <div class="total-row">
+          <span>Total</span><strong id="cartTotal">S/0.00</strong>
+        </div>
+
+        <!-- Cremas (texto encima del botón Crear Pedido) -->
+        <div class="cremas">
+          <strong>Cremas disponibles:</strong>
+          <p class="cremas-list">Mayonesa · Ketchup · Mostaza · Tartara · Kuchi's · Rocoto · Buffalo</p>
+        </div>
+
+        <button class="checkout-btn">Crear Pedido</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="src/js/animaciones.js" defer></script>
+</body>
+</html>
