@@ -21,6 +21,29 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
+body{
+  font-size: clamp(14px, 1.4vw, 16px);
+}
+
+h1{
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+h2{
+  font-size: clamp(16px, 1.8vw, 20px);
+}
+
+.card h3{
+  font-size: clamp(14px, 1.4vw, 16px);
+}
+
+.desc,
+.cremas,
+.cremas-list,
+.extras-list{
+  font-size: clamp(13px, 1.2vw, 14px);
+}
+
 /* Top bar */
 .topbar{
   height:72px;
@@ -149,8 +172,29 @@ body{
   pointer-events: none;
 }
 
+/*
 .card-media{height:150px;overflow:hidden;border-bottom:1px solid rgba(0,0,0,0.4)}
 .card-media img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.85)}
+*/
+
+.card-media{
+  height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-bottom:1px solid rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.15);
+}
+
+.card-media img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  display:block;
+}
 
 .card-body{padding:16px;display:flex;flex-direction:column;gap:12px}
 .card-row{display:flex;align-items:center;justify-content:space-between}
@@ -277,11 +321,64 @@ body{
   .cards-grid{grid-template-columns:repeat(2,1fr)}
   .page{grid-template-columns:1fr 300px}
 }
+/*
 @media (max-width:760px){
   .cards-grid{grid-template-columns:1fr}
   .page{grid-template-columns:1fr}
   .cart{position:relative;height:auto;order:2;margin-top:18px}
 }
+*/
+
+@media (max-width:760px){
+  .cards-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap:14px;
+  }
+
+  .page{
+    grid-template-columns:1fr;
+  }
+
+  .cart{
+    position:relative;
+    height:auto;
+    order:2;
+    margin-top:18px;
+  }
+
+  .card-media{
+    height:160px;
+  }
+  
+  /* títulos de cards */
+  .card h3{
+    font-size:15px;   /* antes 16px → casi igual, más legible */
+  }
+
+  /* descripciones */
+  .desc{
+    font-size:13.5px; /* sube un poco */
+    line-height:1.4;
+  }
+
+  /* precios */
+  .price{
+    font-size:14px;
+  }
+
+  /* botones */
+  .add-btn{
+    font-size:14px;
+    padding:10px 14px;
+  }
+
+  /* tabs */
+  .tab{
+    font-size:14px;
+  }
+}
+
+
 :focus{outline:2px solid rgba(255,255,255,0.06);outline-offset:2px}
 
 
@@ -399,4 +496,34 @@ body{
   .page--center{ min-height:auto; padding:18px }
   .order-list .card{ flex-direction:column; align-items:stretch; }
   .order-total{ text-align:left; }
+}
+
+@media (max-width:760px){
+  body{
+    font-size: clamp(15px, 4vw, 17px);
+  }
+
+  h2{
+    font-size: clamp(17px, 5vw, 20px);
+  }
+
+  h3{
+    font-size: clamp(15px, 4.5vw, 17px);
+  }
+
+  .desc,
+  .subtitle,
+  .cremas,
+  .cremas-list{
+    font-size:14px;
+  }
+
+  .price{
+    font-size:15px;
+  }
+
+  .add-btn,
+  .checkout-btn{
+    font-size:15px;
+  }
 }
