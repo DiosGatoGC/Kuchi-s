@@ -24,6 +24,22 @@
     { name: 'Deshilachado', price: 6.00 }
   ];
 
+  // ===== Mobile cart toggle =====
+  const cartEl = document.querySelector('.cart');
+  const openCartBtn = document.getElementById('openCartBtn');
+
+  function toggleCart(forceOpen = null){
+    if (!cartEl) return;
+    if (forceOpen === true) cartEl.classList.add('open');
+    else if (forceOpen === false) cartEl.classList.remove('open');
+    else cartEl.classList.toggle('open');
+  }
+
+  if (openCartBtn){
+    openCartBtn.addEventListener('click', () => toggleCart());
+  }
+
+
   // Función unificada: ahora acepta img y guarda extras e imagen
   function addItem(name, price, img) {
     const found = cart.find(x => x.name === name);
@@ -270,6 +286,10 @@
     if (t.closest('.add-btn')) {
       const btn = t.closest('.add-btn');
       addItem(btn.dataset.name, parseFloat(btn.dataset.price), btn.dataset.img);
+
+      // abrir carrito automáticamente en mobile
+      //if (window.innerWidth <= 760) toggleCart(true);
+
       return;
     }
 
